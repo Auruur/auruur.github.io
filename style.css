@@ -380,34 +380,47 @@ a {
   }
   
   @media (max-width: 480px) {
-    /* Layout in colonna per dispositivi mobili */
-    body {
-      flex-direction: column;
-      height: auto;
-    }
-    
+    /* La sidebar diventa un header fisso che mostra solo il profilo */
     aside {
       width: 100%;
       height: auto;
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px;
       box-shadow: none;
-      padding: 10px 0;
+      z-index: 1000;
     }
     
+    /* Nascondi il menu della sidebar */
+    aside nav {
+      display: none;
+    }
+    
+    /* Rendi il profilo compatto */
+    aside .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    aside .profile img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    aside h2, 
+    aside h3 {
+      margin: 0;
+      font-size: 0.9em;
+    }
+    
+    /* Sposta il main verso il basso per non coprire il profilo fisso */
     .main {
+      margin-top: 70px; /* Regola in base all'altezza del header */
       margin-left: 0;
       padding: 10px;
-    }
-    
-    /* Menu in linea per la sidebar */
-    aside nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    aside nav ul li {
-      margin: 5px;
     }
   }
   
