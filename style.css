@@ -359,28 +359,8 @@ a {
   }
   
   /* Media Queries per dispositivi più piccoli */
-  @media (max-width: 768px) {
-    aside {
-      width: 180px;
-      padding: 8px;
-    }
-    
-    .main {
-      margin-left: 200px;
-      padding: 15px;
-    }
-    
-    aside nav ul li a {
-      font-size: 1em;
-    }
-    
-    h2 {
-      font-size: 1.6em;
-    }
-  }
-  
   @media (max-width: 480px) {
-    /* La sidebar diventa un header fisso che mostra solo il testo del profilo */
+    /* Sidebar diventa header fisso */
     aside {
       width: 100%;
       height: auto;
@@ -388,9 +368,38 @@ a {
       top: 0;
       left: 0;
       padding: 10px;
+      background-color: #f4f4f4;
       box-shadow: none;
       z-index: 1000;
-      background-color: #f4f4f4; /* Assicurati che lo sfondo rimanga coerente */
+    }
+    
+    /* Visualizzazione del profilo in una riga */
+    aside .profile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    
+    /* Piccola immagine allineata a sinistra */
+    aside .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: block;
+    }
+    
+    /* Mostra Nome e Ruolo in una singola riga con separatore */
+    aside .profile h2,
+    aside .profile h3 {
+      margin: 0;
+      font-size: 1em;
+      display: inline;
+    }
+    
+    /* Aggiunge il separatore dopo il nome */
+    aside .profile h2::after {
+      content: " | ";
     }
     
     /* Nascondi il menu di navigazione */
@@ -398,30 +407,17 @@ a {
       display: none;
     }
     
-    /* Nascondi l'immagine del profilo */
-    aside .profile img {
-      display: none;
-    }
-    
-    /* Rendi il profilo compatto: mostra solo Nome e Ruolo */
-    aside .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-    
-    aside h2, 
-    aside h3 {
-      margin: 0;
-      font-size: 1em;
+    /* Rimuovi eventuali divider (es. border-bottom) dagli heading del main */
+    h2 {
+      border-bottom: none;
     }
     
     /* Sposta il main verso il basso per non coprire l'header fisso */
     .main {
-      margin-top: 60px; /* Regola l'altezza in base all'header */
+      margin-top: 60px; /* Regola in base all'altezza dell'header */
       margin-left: 0;
       padding: 10px;
     }
   }
+  
   
