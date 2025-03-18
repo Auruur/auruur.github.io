@@ -1,84 +1,199 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="it">
 <head>
-    <title>Giovanni Murgia Portfolio</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Giovanni Murgia Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-<aside>
-    <img src="imgs/profile_pic.jpg"/>
-</aside>
-<h2>
-    Giovanni Murgia
-</h2>
-<h3>
-    Data Scientist & Software Engineer
-</h3>
-<ul>
-    <li>
-        <a href="https://www.linkedin.com/in/giovanni-murgia-data02/">LinkedIn</a>
-    </li>
-    <li>
-        <a href="https://github.com/Auruur">GitHub</a>
-    </li>
-    <li>
-        <a href="murzuvanne@gmail.com">e-Mail</a>
-    </li>
-</ul>
 
-<div class="main">
-    <section class="sec" name="work">
-        <h2>WORK EXPERIENCE</h2>
-        <li>
-            <h3>Research Intern, University of Cagliari</h2>
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="imgs/profile_pic.jpg" alt="Profile Picture">
+      <h2>Giovanni Murgia</h2>
+      <h3>Data Scientist</h3>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#about" title="About Me">About Me</a></li>
+        <li><a href="#work" title="Work Experience">Work Experience</a></li>
+        <li><a href="#edu" title="Education">Education</a></li>
+        <li><a href="#proj" title="Projects">Projects</a></li>
+        <li><a href="#publ" title="Publications">Publications</a></li>
+        <li><a href="#hobbies" title="Other Interests">Other Interests</a></li>
+        <li><a href="#contacts" title="Contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </aside>
+    
+  <div class="main">
+    <section class="sec" name="about" id="about">
+      <h2>About Me</h2>
+      <p>Skilled Data Scientist with expertise in leading machine learning and deep learning frameworks, including Scikit-learn, PyTorch, and TensorFlow. Proficient in data manipulation and analysis using libraries such as Pandas and NumPy, as well as database management with SQL. Passionate about leveraging data-driven solutions to solve complex problems.</p>
+    </section>
+    
+    <section class="sec" name="work" id="work">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <a href="https://www.unica.it/it" target="_blank" class="logo">
+            <img src="imgs/unica.png" alt="University of Cagliari Logo">
+          </a>
+          <div class="content-box">
+            <h3>Research Intern</h3>
+            <p class="institution">University of Cagliari</p>
             <ul>
-                <li>Co-authored a paper, presented at the RecSoGood 2024 workshop, held as part of ACM RecSys 2024.</li>
-                <li>Worked on a recommender system for sustainable and healthy nutrition</li>
-                <li>Modeled a novel recipe-based knowledge graph</li>
-                <li>Developed a frontend platform for labeling ingredients</li>
+              <li>Co-authored a paper, presented at the RecSoGood 2024 workshop, held as part of ACM RecSys 2024.</li>
+              <li>Worked on a recommender system for sustainable and healthy nutrition.</li>
+              <li>Modeled a novel recipe-based knowledge graph.</li>
+              <li>Developed a frontend platform for labeling ingredients.</li>
             </ul>
-        </li>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <section class="sec" name="edu">
-        <h2>EDUCATION</h2>
-        <li>
-            <h3>B.Sc. Applied Computer Science & Data Analytics, University of Cagliari</h2>
+    
+    <section class="sec" name="edu" id="edu">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <a href="https://polimi.it" target="_blank" class="logo">
+            <img src="imgs/polimi.png" alt="PoliMI Logo">
+          </a>
+          <div class="content-box">
+            <h3>M.Sc. Computer Science & Engineering | Artificial Intelligence</h3>
+            <p class="institution">Polytechnic University of Milan</p>
             <ul>
-                <li>Final Grade: 110/110 | GPA: 28.15/30</li>
-                <li>Ranked among the top 10% students.</li>
-                <li>Core Subjects: Machine Learning, Deep Learning, Big Data, Computational Statistics, Algorithms and Data Structures.</li>
+              <li>Admitted to the highly selective Master’s program in Artificial Intelligence.</li>
             </ul>
-        </li>
-        
-        <li>
-            <h3>B.Sc. Computer Engineering, University of Granada</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <a href="https://www.unica.it/it" target="_blank" class="logo">
+            <img src="imgs/unica.png" alt="University of Cagliari Logo">
+          </a>
+          <div class="content-box">
+            <h3>B.Sc. Applied Computer Science & Data Analytics</h3>
+            <p class="institution">University of Cagliari</p>
             <ul>
-                <li>Awarded an Erasmus+ scholarship for a semester-long exchange program.</li>
-                <li>Core Subjects: Artificial Intelligence, Communication Networks Security, Web Technologies.</li>
+              <li>Final Grade: 110/110 (Cum laude) | GPA: 28.15/30</li>
+              <li>Ranked among the top 10% students.</li>
+              <li>Core Subjects: Machine Learning, Deep Learning, Big Data, Computational Statistics, Algorithms and Data Structures.</li>
             </ul>
-        </li>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <a href="https://www.ugr.es" target="_blank" class="logo">
+            <img src="imgs/ugr.png" alt="University of Granada Logo">
+          </a>
+          <div class="content-box">
+            <h3>B.Sc. Computer Engineering</h3>
+            <p class="institution">University of Granada</p>
+            <ul>
+              <li>Awarded an Erasmus+ scholarship for a semester-long exchange program.</li>
+              <li>Core Subjects: Artificial Intelligence, Communication Networks Security, Web Technologies.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <a href="https://www.liceomichelangelo.edu.it" target="_blank" class="logo">
+            <img src="imgs/mich.png" alt="Liceo Scientifico Michelangelo Logo">
+          </a>
+          <div class="content-box">
+            <h3>Highschool Diploma</h3>
+            <p class="institution">Liceo Scientifico Michelangelo</p>
+            <ul>
+              <li>Final Grade: 100/100</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <section class="sec" name="proj" id="proj">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <a href="https://github.com/Auruur/rl-maze-solver">
+          <div class="project-box">
+            <img src="imgs/proj1.png" alt="Project 1">
+            <h3>Developed a Reinforcement Learning Agent to Solve Randomly Generated Mazes</h3>
+          </div>
+        </a>
+        <a href="https://github.com/Auruur/gan-vs-data_augmentation">
+          <div class="project-box">
+            <img src="imgs/proj2.webp" alt="Project 2">
+            <h3>Analyzed Oversampling Approaches using Generative Adversarial Networks</h3>
+          </div>
+        </a>
+        <a href="https://github.com/Auruur/email-spamfilter">
+          <div class="project-box">
+            <img src="imgs/proj3.webp" alt="Project 3">
+            <h3>Developed an e-Mail Spam Filter with Machine Learning</h3>
+          </div>
+        </a>
+        <a href="https://github.com/Auruur/hotel-webapp">
+          <div class="project-box">
+            <img src="imgs/proj4.avif" alt="Project 4">
+            <h3>Developed a Full-Stack Hotel Web Application</h3>
+          </div>
+        </a>
+        <a href="https://github.com/Auruur/frogger-ncurses">
+          <div class="project-box">
+            <img src="imgs/proj5.png" alt="Project 5">
+            <h3>Developed Frogger in C using a Parallel Programming Paradigm</h3>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <section class="sec" name="proj">
-        <h2>PROJECTS</h2>
-        <li><a href="https://github.com/Auruur/rl-maze-solver">Developed a Reinforcement Learning Agent to Solve Randomly Generated Mazes</a></li>
-        <li><a href="https://github.com/Auruur/gan-vs-data_augmentation">Analyzed Oversampling Approaches using Generative Adversarial Networks</a></li>
-        <li><a href="https://github.com/Auruur/email-spamfilter">Developed an e-Mail Spam Filter with Machine Learning</a></li>
-        <li><a href="https://github.com/Auruur/hotel-webapp">Developed a Full-Stack Hotel Web Application</a></li>
-        <li><a href="https://github.com/Auruur/frogger-ncurses">Developed Frogger in C using a Parallel Programming Paradigm</a></li>
-    </section>
-
-    <section class="sec" name="publ">
-        <h2>PUBLICATIONS</h2>
+    <section class="sec" name="publ" id="publ">
+      <h2>Publications</h2>
+      <ul>
         <li>
-            <a href="https://drive.google.com/file/d/1tFHG2pnIyombsGBpUabG9f2mjXKWkvFW/view?usp=share_link">Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, Giovanni Murgia. "Knowledge Data Modeling in Food Recommendation: A Case Study on Nutritional Values." Accepted for publication in the post-proceedings of RecSoGood2024, Springer CCIS, indexed Scopus and Web of Science.</a>
+          <a href="https://drive.google.com/file/d/1tFHG2pnIyombsGBpUabG9f2mjXKWkvFW/view?usp=share_link">Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, Giovanni Murgia. "Knowledge Data Modeling in Food Recommendation: A Case Study on Nutritional Values." Accepted for publication in the post-proceedings of RecSoGood2024, Springer CCIS, indexed Scopus and Web of Science.</a>
         </li>
+      </ul>
     </section>
-</div>
+
+    <section class="sec" name="hobbies" id="hobbies">
+        <h2>Other Interests</h2>
+        <div class="interests-grid">
+          <div class="interest-card">
+            <img src="imgs/cyber.jpeg" alt="Cybersecurity">
+            <h3>Competitive Cybersecurity</h3>
+          </div>
+          <div class="interest-card">
+            <img src="imgs/firstaid.jpeg" alt="First Aid">
+            <h3>First Aid Volounteer</h3>
+          </div>
+          <div class="interest-card">
+            <img src="imgs/scout.jpeg" alt="Scout Leader">
+            <h3>Scout Leader</h3>
+          </div>
+          <div class="interest-card">
+            <img src="imgs/music.jpeg" alt="Songwriter">
+            <h3>Songwriter</h3>
+          </div>
+        </div>
+      </section>
+    
+      <section class="sec" name="contacts" id="contacts">
+        <h2>Contacts</h2>
+        <div class="contact-list">
+          <a href="https://www.linkedin.com/in/giovanni-murgia-data02/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Auruur" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i> <span>GitHub</span>
+          </a>
+          <a href="mailto:murzuvanne@gmail.com" target="_blank" title="Gmail">
+            <i class="fas fa-envelope"></i> <span>Email</span>
+          </a>
+        </div>
+      </section>
+      
+  </div>
 
 </body>
 </html>
