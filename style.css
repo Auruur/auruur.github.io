@@ -380,7 +380,7 @@ a {
   }
   
   @media (max-width: 480px) {
-    /* La sidebar diventa un header fisso che mostra solo il profilo */
+    /* La sidebar diventa un header fisso che mostra solo il testo del profilo */
     aside {
       width: 100%;
       height: auto;
@@ -390,35 +390,36 @@ a {
       padding: 10px;
       box-shadow: none;
       z-index: 1000;
+      background-color: #f4f4f4; /* Assicurati che lo sfondo rimanga coerente */
     }
     
-    /* Nascondi il menu della sidebar */
+    /* Nascondi il menu di navigazione */
     aside nav {
       display: none;
     }
     
-    /* Rendi il profilo compatto */
-    aside .profile {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+    /* Nascondi l'immagine del profilo */
+    aside .profile img {
+      display: none;
     }
     
-    aside .profile img {
-      width: 40px;
-      height: 40px;
+    /* Rendi il profilo compatto: mostra solo Nome e Ruolo */
+    aside .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
     }
     
     aside h2, 
     aside h3 {
       margin: 0;
-      font-size: 0.9em;
+      font-size: 1em;
     }
     
-    /* Sposta il main verso il basso per non coprire il profilo fisso */
+    /* Sposta il main verso il basso per non coprire l'header fisso */
     .main {
-      margin-top: 70px; /* Regola in base all'altezza del header */
+      margin-top: 60px; /* Regola l'altezza in base all'header */
       margin-left: 0;
       padding: 10px;
     }
