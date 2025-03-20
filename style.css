@@ -439,11 +439,12 @@ a {
       font-size: 0.9em;
     }
     
-    /* Sposta il main verso il basso per non coprire l'header fisso */
+    /* Aggiunta del padding-bottom per i dispositivi con safe-area (iOS) */
     .main {
       margin-top: 50px;
       margin-left: 0;
       padding: 10px;
+      padding-bottom: calc(10px + env(safe-area-inset-bottom));
     }
   }
   
