@@ -27,25 +27,44 @@ a {
     overflow-y: auto;
   }
   
-  /* Profilo, nome e titolo */
+  /* Profilo, immagine, nome e ruolo */
   aside img {
     max-width: 50%;
     border-radius: 50%;
     margin-bottom: 10px;
   }
   
-  aside h2 {
-    font-size: 1.4em;
-    margin: 5px 0;
-    color: #333;
-    text-align: center;
+  /* Desktop: Contenitore del testo del profilo in colonna, centrato */
+  .profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  aside h3 {
+  /* Stili per nome e ruolo */
+  .profile-text .name,
+  .profile-text .role {
+    font-weight: bold;
+  }
+  
+  .profile-text .name {
+    font-size: 1.2em; /* Nome leggermente più grande */
+    color: #000; /* In nero */
+  }
+  
+  .profile-text .role {
     font-size: 1em;
-    margin: 0 0 10px 0;
-    color: #555;
-    text-align: center;
+    color: #777; /* In grigio */
+  }
+  
+  /* Divider orizzontale (desktop): linea sotto il nome */
+  .profile-text .name::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 5px 0;
   }
   
   /* Menu di navigazione nella sidebar */
@@ -367,39 +386,10 @@ a {
       position: fixed;
       top: 0;
       left: 0;
-      padding: 10px;
+      padding: 5px 10px;
       background-color: #f4f4f4;
       box-shadow: none;
       z-index: 1000;
-    }
-    
-    /* Visualizzazione del profilo in una riga */
-    aside .profile {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 10px;
-    }
-    
-    /* Piccola immagine allineata a sinistra */
-    aside .profile img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: block;
-    }
-    
-    /* Mostra Nome e Ruolo in una singola riga con separatore */
-    aside .profile h2,
-    aside .profile h3 {
-      margin: 0;
-      font-size: 1em;
-      display: inline;
-    }
-    
-    /* Aggiunge il separatore dopo il nome */
-    aside .profile h2::after {
-      content: " | ";
     }
     
     /* Nascondi il menu di navigazione */
@@ -407,17 +397,53 @@ a {
       display: none;
     }
     
-    /* Rimuovi eventuali divider (es. border-bottom) dagli heading del main */
-    h2 {
-      border-bottom: none;
+    /* In modalità mobile la sezione profilo rimane su una linea:
+       riduciamo leggermente le dimensioni per contenere tutto */
+    aside .profile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+    
+    /* Immagine più piccola */
+    aside .profile img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 0;
+    }
+    
+    /* Contenitore del testo: layout in riga */
+    aside .profile .profile-text {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    /* Divider verticale in mobile */
+    aside .profile .profile-text .name::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 1em;
+      background: #ccc;
+      margin: 0 8px;
+    }
+    
+    /* Riduzione delle dimensioni dei font in mobile se necessario */
+    aside .profile .profile-text .name {
+      font-size: 1em;
+    }
+    
+    aside .profile .profile-text .role {
+      font-size: 0.9em;
     }
     
     /* Sposta il main verso il basso per non coprire l'header fisso */
     .main {
-      margin-top: 60px; /* Regola in base all'altezza dell'header */
+      margin-top: 50px;
       margin-left: 0;
       padding: 10px;
     }
   }
-  
   
